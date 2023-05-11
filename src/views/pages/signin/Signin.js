@@ -26,13 +26,13 @@ const Signin = () => {
         <div className='d-flex justify-content-center mb-5 mt-5 mt-sm-0'><img src={LogoSvg}  height={35} /></div>
         <CRow className="justify-content-center">
           <CCol md={8}>
-            <CCardGroup>
-            <CCard className="text-white py-5 " >
+            <CCardGroup className='d-flex flex-column flex-sm-row'>
+            <CCard className="text-white py-5 order-2 order-sm-1" >
                 <CCardBody className="text-center">
                         <img src={SideImage} className='img-fluid'/>
                 </CCardBody>
               </CCard>
-              <CCard className="p-4 align-items-center backgroundColor">
+              <CCard className="p-4 align-items-center backgroundColor order-1 order-sm-2">
                 <CCardBody className="d-flex align-items-center">
                   <CForm>
                     <h5 className='text-center mb-4 '>Please sign in</h5>
