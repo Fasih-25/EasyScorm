@@ -23,10 +23,12 @@ import SideImage from '../assets/images/danial-igdery-FCHlYvR5gJI-unsplash.jpg';
 
 const StudentCourseCard = () => {
   const progressBarRef = useRef(null);
-  var progressVal = '0'
+  var progressVal = '100';
+  var progressNum = parseInt(progressVal)
   useEffect(() => {
     progressBarRef.current.style.setProperty('--progress-value', progressVal);
   }, []);
+  console.log(progressNum)
   return (
         <CRow className="justify-content-center mb-4 courseCard">
             <CCol md={6} className='h-100'>
@@ -46,10 +48,19 @@ const StudentCourseCard = () => {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cum molestiae voluptate tenetur! Recusandae ut iste porro nesciunt provident. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima consequuntur assumenda est dolores in, incidunt adipisci error quis animi perspiciatis.
                   </CCardText>
                   <CCardGroup className='d-flex align-items-center mt-3'>
-                    <CButton color='transparent ' className=' border border-2 border-dark  px-5  fs-5 fw-semibold '>
-                      Start
-                    </CButton> 
-                    <div class="progress-bar js mx-4" ref={progressBarRef}>
+                    <CButton color='transparent ' className= {(progressNum === 0) ? ' border border-2 border-dark me-3 px-5  fs-6 fw-semibold ':'d-none'}>
+                      Start 
+                    </CButton>
+                    <CButton color='transparent ' className= {(progressNum > 0 && progressNum < 100) ? ' border border-2 border-dark me-3 px-5  fs-6 fw-semibold ':'d-none'}>
+                      Start over
+                    </CButton>
+                    <CButton color='transparent ' className= {(progressNum > 0 && progressNum < 100) ? 'border border-2 border-dark mx-3 px-5  fs-6 fw-semibold ':' d-none '}>
+                      Resume
+                    </CButton>
+                    <CButton color='transparent ' className= {(progressNum === 100) ? 'border border-2 border-dark me-3 px-5  fs-6 fw-semibold ':' d-none '}>
+                      Start Again
+                    </CButton>
+                    <div className="progress-bar js " ref={progressBarRef}>
                         {/* <progress id="js" min="0" max="100" value="73"></progress> */}
                         {progressVal}%
                     </div>

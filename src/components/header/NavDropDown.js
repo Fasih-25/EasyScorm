@@ -40,19 +40,19 @@ const NavDropDown = () => {
         </CDropdownToggle>
         <CDropdownMenu className="pt-0" placement="bottom-end">
             <CDropdownHeader className="bg-light fw-semibold py-2">Account</CDropdownHeader>
-            <Link to="/signin" className='text-decoration-none'>
-            <CDropdownItem  className="border border-bottom-2 border-top-0 border-end-0 border-start-0 border-dark ">
-                Logout
-            </CDropdownItem>
-            </Link>
             <Link onClick={() => setProfilePopup(true)} className='text-decoration-none' >
             <CDropdownItem  className="border border-bottom-2 border-top-0 border-end-0 border-start-0 border-dark">
                 Profile
             </CDropdownItem>
             </Link>
             <Link onClick={() => setButtonPopup(true)} className='text-decoration-none'>
-            <CDropdownItem >
+            <CDropdownItem className="border border-bottom-2 border-top-0 border-end-0 border-start-0 border-dark ">
                 Setting
+            </CDropdownItem>
+            </Link>
+            <Link to="/signin" className='text-decoration-none'>
+            <CDropdownItem  >
+                Logout
             </CDropdownItem>
             </Link>
         </CDropdownMenu>

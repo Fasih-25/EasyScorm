@@ -46,7 +46,7 @@ const Navbar = () => {
     //     </CCollapse>
     //   </CContainer>
     // </CHeader>
-    <CNavbar expand="lg" colorScheme="transparent" className="bg-transparent pt-4 px-md-5 border border-bottom-2 border-top-0 border-end-0 border-start-0 border-dark">
+    <CNavbar expand="lg" className="bg-transparent py-3 px-md-5 border border-bottom-2 border-top-0 border-end-0 border-start-0 border-dark">
       <CContainer fluid>
         <Link>
             <CNavbarBrand ><img src={logo} height={35} alt="Logo" /></CNavbarBrand>

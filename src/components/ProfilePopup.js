@@ -55,7 +55,7 @@ export default function ProfilePopup({trigger, onClose}) {
                                         
                                         <h6 className=" text-dark mb-2">Email Address</h6>
                                         <CInputGroup className="mb-4">
-                                            <CFormInput autoComplete="EmailAddress" type="email" placeholder='tennison54@gmail.com' required/>
+                                            <CFormInput autoComplete="EmailAddress" type="email" placeholder='hi@regex.global' required/>
                                         </CInputGroup>
 
                                         <h6 className="text-dark mb-2">Phone</h6>

@@ -23,7 +23,7 @@ const SavePassword = () => {
       <CContainer>
         <div className='d-flex justify-content-center mb-5'><img src={LogoSvg}  height={35} /></div>
         <CRow className="justify-content-center">
-          <CCol lg={5}>
+          <CCol lg={6}>
             <CCardGroup>
               <CCard className="p-4 backgroundColor">
                 <CCardBody>

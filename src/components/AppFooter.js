@@ -6,14 +6,14 @@ const AppFooter = () => {
     <CFooter>
       <div>
         <span> Support Contact: +92-213-4146566 </span>
-        <a href="https://consultant@regex.global" target="_blank" rel="noopener noreferrer">
+        <a href="https://consultant@regex.global" target="_blank" rel="noopener noreferrer" className='text-decoration-none'>
           | consultant@regex.global
         </a>
         {/* <span className="ms-1">  </span> */}
       </div>
       <div className="ms-auto">
         <span className="me-1">Powered by</span>
-        <a href="https://regex.global" target="_blank" rel="noopener noreferrer">
+        <a href="https://regex.global" target="_blank" rel="noopener noreferrer" className='text-decoration-none'>
           REGEX
         </a>
       </div>

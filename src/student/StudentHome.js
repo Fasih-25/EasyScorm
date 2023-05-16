@@ -3,7 +3,7 @@ import CIcon from '@coreui/icons-react'
 import { CContainer } from '@coreui/react'
 import React from 'react'
 import Navbar from 'src/components/Navbar'
-import avatar from '../assets/images/avatars/2.jpg' 
+import avatar from '../assets/images/avatars/Ellipse5.png' 
 import StudentCourseCard from '../components/StudentCourseCard'
 
 export default function StudentHome() {
@@ -21,10 +21,10 @@ export default function StudentHome() {
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates tenetur, ullam nesciunt cum, illo quas, mollitia dolores commodi aut blanditiis voluptas aliquid neque perspiciatis. Natus enim harum sequi culpa, iusto tempore totam eligendi veritatis!
                         </div>
                         <div>
-                            <CIcon icon={cibFacebook} className='mx-1 my-4' width={20}/>
-                            <CIcon icon={cibInstagram} className='mx-1 my-4' width={20}/>
-                            <CIcon icon={cibLinkedin} className='mx-1 my-4' width={20}/>    
-                            <CIcon icon={cibTwitter} className='mx-1 my-4' width={20}/>    
+                            <CIcon icon={cibFacebook} className='me-3 my-3 mt-sm-4' width={20}/>
+                            <CIcon icon={cibInstagram} className='mx-3 my-3 mt-sm-4' width={20}/>
+                            <CIcon icon={cibLinkedin} className='mx-3 my-3 mt-sm-4' width={20}/>    
+                            <CIcon icon={cibTwitter} className='mx-3 my-3 mt-sm-4' width={20}/>    
                         </div>
                 </div>
                 <div>

@@ -24,7 +24,7 @@ const AppHeader = () => {
   const sidebarShow = useSelector((state) => state.sidebarShow)
 
   return (
-    <CHeader position="sticky" className="mb-4">
+    <CHeader position="sticky" className="mb-3">
       <CContainer fluid>
         <CHeaderToggler
           className="ps-1"
@@ -49,7 +49,7 @@ const AppHeader = () => {
             <CNavLink to="/settings" component={NavLink}>Settings</CNavLink>
           </CNavItem>
         </CHeaderNav>
-        <CHeaderNav className="ms-3">
+        <CHeaderNav className="ms-3 align-items-center">
           <p className='fw-bold mb-0'>Daren Zack</p>
           <AppHeaderDropdown />
         </CHeaderNav>

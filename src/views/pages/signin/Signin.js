@@ -25,9 +25,9 @@ const Signin = () => {
       <CContainer>
         <div className='d-flex justify-content-center mb-5 mt-5 mt-sm-0'><img src={LogoSvg}  height={35} /></div>
         <CRow className="justify-content-center">
-          <CCol md={8}>
+          <CCol md={10}>
             <CCardGroup className='d-flex flex-column flex-sm-row'>
-            <CCard className="text-white py-5 order-2 order-sm-1" >
+              <CCard className="text-white py-5 order-2 order-sm-1" >
                 <CCardBody className="text-center">
                         <img src={SideImage} className='img-fluid'/>
                 </CCardBody>

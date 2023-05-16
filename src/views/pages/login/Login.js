@@ -55,27 +55,29 @@ const Login = () => {
                         </Link>
                       </CCol>
                       <CCol xs={6} className="text-right">
-                        <CButton color="link" className="px-0">
-                          Forgot password?
-                        </CButton>
+                        <Link to='/recoverAccount'>
+                          <CButton color="link" className="px-0">
+                            Forgot password?
+                          </CButton>
+                        </Link>
                       </CCol>
                     </CRow>
                   </CForm>
                 </CCardBody>
               </CCard>
               <CCard className="text-white bg-primary py-5" >
-                <CCardBody className="text-center">
+                <CCardBody className="d-flex text-center align-items-center">
                   <div>
-                    <h2>Sign up</h2>
+                    <h2 className='comicsans text-white'>EASYSCORM</h2>
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                       tempor incididunt ut labore et dolore magna aliqua.
                     </p>
-                    <Link to="/register">
+                    {/* <Link to="/register">
                       <CButton color="primary" className="mt-3" active tabIndex={-1}>
                         Register Now!
                       </CButton>
-                    </Link>
+                    </Link> */}
                   </div>
                 </CCardBody>
               </CCard>
