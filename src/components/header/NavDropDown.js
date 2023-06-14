@@ -9,25 +9,12 @@ import {
   CDropdownMenu,
   CDropdownToggle,
 } from '@coreui/react'
-import {
-  cilBell,
-  cilCreditCard,
-  cilCommentSquare,
-  cilEnvelopeOpen,
-  cilFile,
-  cilLockLocked,
-  cilSettings,
-  cilTask,
-  cilUser,
-} from '@coreui/icons'
-import CIcon from '@coreui/icons-react'
 
-import avatar8 from './../../assets/images/avatars/8.jpg'
 import { Link } from 'react-router-dom'
 import ChangePassword from '../ChangePassword'
 import ProfilePopup from '../ProfilePopup'
 
-const NavDropDown = () => {
+const NavDropDown = (props) => {
     const[buttonPopup, setButtonPopup] = useState(false);
     const[profilePopup, setProfilePopup] = useState(false);
     const handleOnClose = () => setButtonPopup(false)
@@ -36,7 +23,7 @@ const NavDropDown = () => {
     <>
         <CDropdown variant="nav-item">
         <CDropdownToggle placement="bottom-end" className="py-0" caret={false}>
-            <CAvatar src={avatar8} size="md" />
+            <CAvatar src={props.user.profile_image} className='border border-2 border-dark' size="md" />
         </CDropdownToggle>
         <CDropdownMenu className="pt-0" placement="bottom-end">
             <CDropdownHeader className="bg-light fw-semibold py-2">Account</CDropdownHeader>
@@ -57,9 +44,9 @@ const NavDropDown = () => {
             </Link>
         </CDropdownMenu>
         </CDropdown>
-        <ChangePassword trigger={buttonPopup} onClose={handleOnClose}>
+        <ChangePassword trigger={buttonPopup} onClose={handleOnClose} user = {props.user} >
       </ChangePassword>
-        <ProfilePopup trigger={profilePopup} onClose={handleProfileClose}>
+        <ProfilePopup trigger={profilePopup} onClose={handleProfileClose} user = {props.user} > 
       </ProfilePopup>
     </>
   )

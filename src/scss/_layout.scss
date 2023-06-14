@@ -65,3 +65,22 @@
 .courseThumnail{
   height: 50vh;
 }
+
+
+
+
+@media only screen and (min-width: 600px) {
+  .popupModal{
+    z-index: 1031 !important;
+  }
+  .sidebar.sidebar-fixed {
+    z-index: 1029;
+  }
+}
+.iconsDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 30px 25px 0px 0px;
+}

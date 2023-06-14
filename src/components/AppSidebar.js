@@ -1,26 +1,19 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-
 import { CSidebar, CSidebarBrand, CSidebarNav, CSidebarToggler } from '@coreui/react'
-import CIcon from '@coreui/icons-react'
-import scormlogo from '../assets/images/Group57.svg'
-
 import { AppSidebarNav } from './AppSidebarNav'
-
-import { logoNegative } from 'src/assets/brand/logo-negative'
-import { sygnet } from 'src/assets/brand/sygnet'
-
 import SimpleBar from 'simplebar-react'
 import 'simplebar/dist/simplebar.min.css'
-
-// sidebar nav config
+import store from 'src/store'
 import navigation from '../_nav'
 
-const AppSidebar = () => {
+const AppSidebar = (props) => {
   const dispatch = useDispatch()
   const unfoldable = useSelector((state) => state.sidebarUnfoldable)
   const sidebarShow = useSelector((state) => state.sidebarShow)
-
+  const newstate = store.getState();
+  const portal = newstate.portal;
+  
   return (
     <CSidebar
       position="fixed"
@@ -30,9 +23,9 @@ const AppSidebar = () => {
         dispatch({ type: 'set', sidebarShow: visible })
       }}
     >
-      <CSidebarBrand className="d-none d-md-flex justify-content-start px-4" to="/">
+      <CSidebarBrand className="d-none d-md-flex justify-content-start px-4" to="/dashboard">
         
-        <img src={scormlogo}  className='scormLogo '/><p className='mb-0 ps-1 comicsans h5'>EASYSCORM</p>
+        <img src={props.portal ? props.portal.logo : ""} height={30} className='scormLogo '/><p className='mb-0 ps-1 comicsans h5'>{props.portal ? props.portal.title : ""}</p>
       </CSidebarBrand>
       <CSidebarNav>
         <SimpleBar>

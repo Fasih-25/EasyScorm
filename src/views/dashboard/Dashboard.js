@@ -1,5 +1,6 @@
-import React from 'react'
-
+import React,{useState, useEffect } from 'react'
+import store from '../../store';
+import { useSelector, useDispatch } from 'react-redux'
 import {
   CButton,
   CButtonGroup,
@@ -8,15 +9,20 @@ import {
   CCol,
   CRow,
 } from '@coreui/react'
-
+import {
+  AppContent,
+  AppSidebar,
+  AppFooter,
+  AppHeader,
+} from "../../components/index";
 import WidgetsDropdown from '../widgets/WidgetsDropdown'
 import ComboCharts from 'src/components/ComboCharts'
+import {useLocation,useNavigate} from 'react-router-dom';
 
-const Dashboard = () => {
-
+const Dashboard = (props) => {
   return (
     <>
-      <WidgetsDropdown />
+      <WidgetsDropdown data = {props.user} />
       <CCard className="mb-5">
         <CCardBody>
           <CRow>
